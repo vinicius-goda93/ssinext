@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Source_Sans_3, Michroma } from "next/font/google";
+import { Inter, Exo_2 } from "next/font/google";
 import "./globals.css";
 
-const sourceSans = Source_Sans_3({
+const inter = Inter({
   variable: "--font-source-sans",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
 });
 
-const michroma = Michroma({
+const exo2 = Exo_2({
   variable: "--font-eurostile",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sourceSans.variable} ${michroma.variable}`}>
+    <html lang="en" className={`${inter.variable} ${exo2.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   );
