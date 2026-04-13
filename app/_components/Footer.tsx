@@ -23,7 +23,7 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200 py-6 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-start justify-between gap-8">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           <div className="flex-1">
             <p className="text-ssi-dark-blue text-xs mb-3">
               General Engineering License #AC - 13555
@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
 
           <nav className="shrink-0">
-            <ul className="space-y-0.5 text-right">
+            <ul className="space-y-0.5 md:text-right">
               {sitemapLinks.map((item) => (
                 <li key={item}>
                   <a

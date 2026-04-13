@@ -55,8 +55,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/30" />
 
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 pt-16 pb-12">
-          <div className="flex justify-end">
-            <div className="bg-white px-12 py-14 max-w-xl">
+          <div className="flex justify-center md:justify-end">
+            <div className="bg-white px-8 py-10 md:px-12 md:py-14 max-w-xl w-full md:w-auto">
               <h1 className="font-eurostile leading-[1.1] mb-6">
                 <span className="block font-normal text-ssi-dark-blue text-[clamp(1.4rem,2.5vw,1.8rem)] mb-1">
                   We Build
@@ -85,10 +85,10 @@ export default function Home() {
         </div>
 
         {/* Residential Services overlapping card */}
-        <div className="relative z-20 px-6 -mb-[160px]">
+        <div className="relative z-20 px-6 md:-mb-[160px]">
           <div className="max-w-7xl mx-auto">
-            <div className="flex shadow-xl">
-              <div className="bg-white px-10 py-8 flex-1">
+            <div className="flex flex-col md:flex-row shadow-xl">
+              <div className="bg-white px-6 py-8 md:px-10 md:py-8 flex-1">
                 <h2 className="font-eurostile font-bold uppercase text-[clamp(1.6rem,3vw,2rem)] leading-tight text-ssi-dark-blue">
                   Residential
                   <br />
@@ -104,7 +104,7 @@ export default function Home() {
                 <h3 className="font-eurostile font-bold text-ssi-dark-blue text-base mt-5 mb-2">
                   Solutions
                 </h3>
-                <ul className="grid grid-cols-2 gap-x-6 gap-y-1 text-[12px] text-ssi-dark-blue">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1 text-[12px] text-ssi-dark-blue">
                   {residentialSolutions.map((s) => (
                     <li key={s} className="flex items-start gap-1.5">
                       <span className="text-ssi-orange mt-0.5">▶</span> {s}
@@ -118,7 +118,7 @@ export default function Home() {
                   Get a Free Estimate
                 </a>
               </div>
-              <div className="relative w-[380px] flex-shrink-0 bg-ssi-charcoal bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/images/residential-concrete.jpg')" }}>
+              <div className="relative h-[250px] md:h-auto md:w-[380px] flex-shrink-0 bg-ssi-charcoal bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/images/residential-concrete.jpg')" }}>
                 <div className="absolute inset-0 bg-ssi-dark-blue/60" />
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-8 py-10">
                   <span className="font-eurostile font-bold text-white text-[clamp(2.5rem,5vw,3.5rem)] leading-none">
@@ -136,13 +136,13 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="h-[160px] bg-white" />
+      <div className="hidden md:block h-[160px] bg-white" />
 
       {/* SECTION 3 — COMMERCIAL SERVICES */}
       <section className="bg-white py-12 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex shadow-xl">
-            <div className="relative w-[420px] flex-shrink-0 bg-ssi-charcoal bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/images/commercial-crane.jpg')" }}>
+          <div className="flex flex-col-reverse md:flex-row shadow-xl">
+            <div className="relative h-[250px] md:h-auto md:w-[420px] flex-shrink-0 bg-ssi-charcoal bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/images/commercial-crane.jpg')" }}>
               <div className="absolute inset-0 bg-ssi-bright-blue/70" />
               <div className="relative z-10 flex flex-col justify-end h-full px-8 py-8">
                 <div className="font-eurostile font-bold text-white text-[clamp(3rem,5vw,4.5rem)] leading-none">
@@ -154,7 +154,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="bg-white px-10 py-8 flex-1">
+            <div className="bg-white px-6 py-8 md:px-10 md:py-8 flex-1">
               <h2 className="font-eurostile font-bold uppercase text-[clamp(1.6rem,3vw,2rem)] leading-tight text-ssi-dark-blue">
                 Commercial
                 <br />
@@ -169,7 +169,7 @@ export default function Home() {
               <h3 className="font-eurostile font-bold text-ssi-dark-blue text-base mt-5 mb-2">
                 Solutions
               </h3>
-              <ul className="grid grid-cols-2 gap-x-6 gap-y-1 text-[12px] text-ssi-dark-blue">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1 text-[12px] text-ssi-dark-blue">
                 {commercialSolutions.map((s) => (
                   <li key={s} className="flex items-start gap-1.5">
                     <span className="text-ssi-orange mt-0.5">▶</span> {s}
@@ -190,8 +190,8 @@ export default function Home() {
       {/* SECTION 4 — ABOUT US */}
       <section className="bg-white py-12 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex shadow-xl">
-            <div className="bg-white px-10 py-8 flex-1">
+          <div className="flex flex-col md:flex-row shadow-xl">
+            <div className="bg-white px-6 py-8 md:px-10 md:py-8 flex-1">
               <h2 className="font-eurostile font-bold uppercase text-[clamp(1.6rem,3vw,2rem)] leading-tight text-ssi-dark-blue">
                 About Us
                 <br />
@@ -213,7 +213,7 @@ export default function Home() {
                 Contact Us
               </a>
             </div>
-            <div className="relative w-[420px] flex-shrink-0 bg-ssi-charcoal bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/images/about-team.jpg')" }}>
+            <div className="relative h-[250px] md:h-auto md:w-[420px] flex-shrink-0 bg-ssi-charcoal bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/images/about-team.jpg')" }}>
               <div className="absolute inset-0 bg-ssi-dark-blue/40" />
               <div className="relative z-10 flex flex-col justify-center h-full px-10 py-10">
                 <p className="font-eurostile font-bold text-white text-[clamp(1.8rem,3vw,2.4rem)] leading-tight italic">
@@ -244,7 +244,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {articles.map((a) => (
               <div
                 key={a.title}
@@ -277,9 +277,9 @@ export default function Home() {
       </section>
 
       {/* SECTION 6 — 40 YEARS BADGE + MISSION */}
-      <div className="relative z-20 px-6 -mb-[80px]">
+      <div className="relative z-20 px-6 md:-mb-[80px]">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white shadow-[0_4px_25px_rgba(0,0,0,0.12)] px-8 py-6 flex items-center gap-6 max-w-3xl mx-auto">
+          <div className="bg-white shadow-[0_4px_25px_rgba(0,0,0,0.12)] px-6 py-6 md:px-8 flex flex-col md:flex-row items-center gap-6 max-w-3xl mx-auto">
             <div className="flex-shrink-0">
               <svg
                 width="120"
@@ -306,7 +306,7 @@ export default function Home() {
                   x="60"
                   y="62"
                   textAnchor="middle"
-                  fontFamily="'Michroma', sans-serif"
+                  fontFamily="'Exo 2', sans-serif"
                   fontSize={32}
                   fontWeight="bold"
                   fill="white"
@@ -317,7 +317,7 @@ export default function Home() {
                   x="60"
                   y="80"
                   textAnchor="middle"
-                  fontFamily="'Michroma', sans-serif"
+                  fontFamily="'Exo 2', sans-serif"
                   fontSize={11}
                   fontWeight="bold"
                   fill="white"
@@ -329,7 +329,7 @@ export default function Home() {
                   x="60"
                   y="100"
                   textAnchor="middle"
-                  fontFamily="'Source Sans 3', sans-serif"
+                  fontFamily="'Inter', sans-serif"
                   fontSize={7}
                   fill="white"
                   letterSpacing={1}
@@ -340,7 +340,7 @@ export default function Home() {
                   x="60"
                   y="112"
                   textAnchor="middle"
-                  fontFamily="'Source Sans 3', sans-serif"
+                  fontFamily="'Inter', sans-serif"
                   fontSize={7}
                   fill="white"
                   letterSpacing={1}
@@ -349,14 +349,14 @@ export default function Home() {
                 </text>
               </svg>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 text-center md:text-left">
               <p className="text-ssi-dark-blue text-[13px] leading-relaxed">
                 Our purpose is to protect, preserve and repair Hawai&apos;i&apos;s
                 built environment by addressing challenging soil conditions,
                 restoring structural integrity, and reinforcing the foundations
                 that sustain homes, businesses, and communities.
               </p>
-              <div className="flex items-center gap-8 mt-4">
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 mt-4">
                 <a
                   href="#contact"
                   className="font-eurostile font-bold uppercase tracking-wider text-[12px] text-ssi-orange hover:text-ssi-orange/80 transition border-b-2 border-ssi-orange pb-0.5"
@@ -372,9 +372,9 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="bg-[#eceeed] pt-[100px] pb-14 px-6">
+      <section className="bg-[#eceeed] pt-10 md:pt-[100px] pb-14 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="flex items-start gap-10">
+          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10">
             <div className="flex-1">
               <h2 className="font-eurostile font-bold text-[clamp(1.4rem,2.5vw,1.8rem)] mb-3">
                 <span className="text-ssi-dark-blue">Our </span>
@@ -388,7 +388,7 @@ export default function Home() {
                 with quality and safety.
               </p>
             </div>
-            <div className="flex-shrink-0 mt-4">
+            <div className="flex-shrink-0 mt-4 hidden md:block">
               <svg
                 width="260"
                 height="180"
@@ -411,8 +411,8 @@ export default function Home() {
 
       {/* SECTION 7 — LEAD CAPTURE FORM */}
       <section id="estimate" className="bg-ssi-bright-blue">
-        <div className="grid grid-cols-2">
-          <div className="bg-ssi-bright-blue p-12 lg:p-16 flex flex-col justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="bg-ssi-bright-blue p-8 md:p-12 lg:p-16 flex flex-col justify-between">
             <div>
               <div className="mb-10">
                 <LogoSVG clipId="clip-form-main" />
@@ -472,7 +472,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-ssi-bright-blue p-12 lg:p-16 border-l border-white/10">
+          <div className="bg-ssi-bright-blue p-8 md:p-12 lg:p-16 md:border-l border-t md:border-t-0 border-white/10">
             <EstimateForm fieldBg="bg-ssi-form-dark" />
           </div>
         </div>
@@ -482,4 +482,3 @@ export default function Home() {
     </>
   );
 }
-

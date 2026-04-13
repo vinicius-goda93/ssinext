@@ -64,24 +64,24 @@ export default function Commercial() {
       <Header clipId="clip-hdr-commercial" />
 
       {/* SECTION 2 — HERO */}
-      <section className="relative min-h-[600px] flex items-center bg-ssi-charcoal bg-cover bg-center" style={{ backgroundImage: "url('/images/com-hero.jpg')" }}>
+      <section className="relative min-h-[400px] md:min-h-[600px] flex items-center bg-ssi-charcoal bg-cover bg-center" style={{ backgroundImage: "url('/images/com-hero.jpg')" }}>
         <div className="absolute inset-0 bg-ssi-dark-blue/50" />
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-24">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-16 md:py-24">
           <div className="max-w-3xl">
             <h1 className="font-eurostile text-white leading-[1.05] mb-6">
-              <span className="block font-normal text-[clamp(2rem,4.5vw,3.2rem)]">
+              <span className="block font-normal text-[clamp(1.6rem,4.5vw,3.2rem)]">
                 We Build
               </span>
-              <span className="block font-bold uppercase text-[clamp(3rem,6vw,4.5rem)] tracking-tight">
+              <span className="block font-bold uppercase text-[clamp(2.2rem,6vw,4.5rem)] tracking-tight">
                 Commercial
                 <br />
                 Construction
               </span>
-              <span className="block font-normal uppercase text-[clamp(2.2rem,4vw,3rem)] tracking-tight">
+              <span className="block font-normal uppercase text-[clamp(1.6rem,4vw,3rem)] tracking-tight">
                 Throughout Hawaii
               </span>
             </h1>
-            <p className="font-eurostile font-normal uppercase tracking-[0.25em] text-white/80 text-sm mb-10">
+            <p className="font-eurostile font-normal uppercase tracking-[0.25em] text-white/80 text-xs md:text-sm mb-10">
               Trusted Commercial Contractors for Over 46 Years
             </p>
             <a
@@ -95,9 +95,9 @@ export default function Commercial() {
       </section>
 
       {/* SECTION 3 — TRUST BAR */}
-      <section className="bg-white py-10 px-6">
+      <section className="bg-white py-8 md:py-10 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap items-center justify-between gap-y-6">
+          <div className="grid grid-cols-2 md:flex md:flex-wrap items-center justify-between gap-6">
             <div className="flex items-center gap-1">
               <div className="text-center">
                 <div
@@ -162,15 +162,15 @@ export default function Commercial() {
 
       {/* SECTION 4 — SERVICES & STAT (2x2) */}
       <section>
-        <div className="grid grid-cols-2">
-          <div className="bg-white p-10 lg:p-14">
-            <h2 className="font-eurostile font-bold text-ssi-dark-blue text-3xl uppercase mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="bg-white p-8 md:p-10 lg:p-14">
+            <h2 className="font-eurostile font-bold text-ssi-dark-blue text-2xl md:text-3xl uppercase mb-6">
               Our Commercial Services
             </h2>
             <h3 className="font-eurostile font-bold text-ssi-dark-blue text-lg uppercase mb-5">
               Foundation &amp; Structural Repairs
             </h3>
-            <div className="grid grid-cols-2 gap-x-10 gap-y-3 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 mb-10">
               {foundationServices.map((s) => (
                 <div key={s} className="flex items-center">
                   <span className="text-ssi-dark-blue text-sm">
@@ -188,7 +188,7 @@ export default function Commercial() {
             </a>
           </div>
 
-          <div className="relative flex items-end justify-end bg-ssi-charcoal bg-cover bg-center p-10 lg:p-14" style={{ backgroundImage: "url('/images/com-drill.jpg')" }}>
+          <div className="relative flex items-end justify-end bg-ssi-charcoal bg-cover bg-center p-8 md:p-10 lg:p-14 min-h-[300px]" style={{ backgroundImage: "url('/images/com-drill.jpg')" }}>
             <div className="absolute inset-0 bg-ssi-dark-blue/40" />
             <div className="relative z-10 text-white text-right max-w-sm">
               <h3 className="font-eurostile font-bold uppercase text-3xl leading-tight mb-1">
@@ -204,7 +204,7 @@ export default function Commercial() {
             </div>
           </div>
 
-          <div className="relative flex items-end bg-ssi-charcoal bg-cover bg-center p-10 lg:p-14" style={{ backgroundImage: "url('/images/com-foundation.jpg')" }}>
+          <div className="relative flex items-end bg-ssi-charcoal bg-cover bg-center p-8 md:p-10 lg:p-14 min-h-[300px]" style={{ backgroundImage: "url('/images/com-foundation.jpg')" }}>
             <div className="absolute inset-0 bg-ssi-dark-blue/40" />
             <div className="relative z-10 text-white">
               <h3 className="font-eurostile font-bold uppercase text-3xl leading-tight mb-1">
@@ -219,8 +219,8 @@ export default function Commercial() {
             </div>
           </div>
 
-          <div className="bg-white p-10 lg:p-14">
-            <h2 className="font-eurostile font-bold text-ssi-dark-blue text-2xl uppercase mb-4">
+          <div className="bg-white p-8 md:p-10 lg:p-14">
+            <h2 className="font-eurostile font-bold text-ssi-dark-blue text-xl md:text-2xl uppercase mb-4">
               Commercial Foundation
               <br />
               Solutions
@@ -253,7 +253,7 @@ export default function Commercial() {
         <div className="max-w-5xl mx-auto">
           <h2
             className="font-eurostile font-bold text-ssi-dark-blue uppercase mb-4 text-center"
-            style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
+            style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)" }}
           >
             Commercial Concrete Spall Repair
           </h2>
@@ -263,7 +263,7 @@ export default function Commercial() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {(["Before", "After"] as const).map((label) => (
               <div
                 key={label}
@@ -285,11 +285,11 @@ export default function Commercial() {
         <div className="max-w-6xl mx-auto">
           <h2
             className="font-eurostile font-bold text-ssi-dark-blue text-center uppercase mb-10"
-            style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
+            style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)" }}
           >
             Success Projects
           </h2>
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {successProjects.map((p) => (
               <div
                 key={p.label}
@@ -297,7 +297,7 @@ export default function Commercial() {
                 style={{ backgroundImage: `url('${p.image}')` }}
               >
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ssi-orange/90 to-transparent" />
-                <span className="absolute bottom-4 left-0 right-0 text-center font-eurostile font-bold text-white text-sm uppercase tracking-wide leading-tight whitespace-pre-line">
+                <span className="absolute bottom-4 left-0 right-0 text-center font-eurostile font-bold text-white text-xs md:text-sm uppercase tracking-wide leading-tight whitespace-pre-line">
                   {p.label}
                 </span>
               </div>
@@ -308,8 +308,8 @@ export default function Commercial() {
 
       {/* SECTION 7 — LEAD CAPTURE FORM */}
       <section id="estimate" className="bg-ssi-charcoal">
-        <div className="grid grid-cols-2">
-          <div className="bg-ssi-charcoal p-12 lg:p-16 flex flex-col justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="bg-ssi-charcoal p-8 md:p-12 lg:p-16 flex flex-col justify-between">
             <div>
               <div className="mb-10">
                 <LogoSVG clipId="clip-form-commercial" width={208} height={53} />
@@ -367,7 +367,7 @@ export default function Commercial() {
             </div>
           </div>
 
-          <div className="bg-ssi-charcoal p-12 lg:p-16 border-l border-white/10">
+          <div className="bg-ssi-charcoal p-8 md:p-12 lg:p-16 md:border-l border-t md:border-t-0 border-white/10">
             <EstimateForm fieldBg="bg-ssi-form-charcoal" />
           </div>
         </div>
@@ -387,11 +387,11 @@ function TrustItem({
 }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="w-14 h-14 rounded-full bg-ssi-dark-blue flex items-center justify-center shrink-0">
+      <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-ssi-dark-blue flex items-center justify-center shrink-0">
         {icon}
       </div>
       <div>
-        <div className="font-eurostile font-bold text-ssi-dark-blue text-[15px] leading-tight">
+        <div className="font-eurostile font-bold text-ssi-dark-blue text-[13px] md:text-[15px] leading-tight">
           {children}
         </div>
       </div>

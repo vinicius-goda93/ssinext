@@ -2,19 +2,19 @@ export default function EstimateForm({ fieldBg }: { fieldBg: string }) {
   const inputCls = `w-full ${fieldBg} border border-white/15 text-white px-4 py-3 text-sm focus:outline-none focus:border-ssi-orange transition`;
   return (
     <form className="space-y-5">
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Field label="First Name" required inputCls={inputCls} />
         <Field label="Last Name" required inputCls={inputCls} />
       </div>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Field label="Email" type="email" required inputCls={inputCls} />
         <Field label="Phone Number" type="tel" required inputCls={inputCls} />
       </div>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Field label="Address" inputCls={inputCls} />
         <Field label="Unit" inputCls={inputCls} />
       </div>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Field label="City" inputCls={inputCls} />
         <Field label="State" inputCls={inputCls} />
       </div>

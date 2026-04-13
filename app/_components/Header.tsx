@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import LogoSVG from "./LogoSVG";
 
 const navItems = [
@@ -34,28 +37,46 @@ const ChevronDown = () => (
 );
 
 export default function Header({ clipId }: { clipId: string }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50">
       <div className="bg-ssi-dark-blue py-1.5 px-6">
-        <div className="max-w-7xl mx-auto flex justify-end items-center gap-6">
-          <span className="text-white text-sm">License #AC - 13555</span>
-          <span className="text-white text-sm">(808) 845-2474</span>
+        <div className="max-w-7xl mx-auto flex justify-between md:justify-end items-center gap-4 md:gap-6">
+          <span className="text-white text-sm hidden md:inline">License #AC - 13555</span>
+          <a href="tel:8088452474" className="text-white text-sm">(808) 845-2474</a>
           <a
             href="#estimate"
-            className="font-eurostile font-bold text-sm uppercase tracking-wide bg-ssi-orange text-white px-4 py-2 hover:opacity-90 transition-opacity"
+            className="font-eurostile font-bold text-xs md:text-sm uppercase tracking-wide bg-ssi-orange text-white px-3 py-1.5 md:px-4 md:py-2 hover:opacity-90 transition-opacity"
           >
-            Get a Free Estimate
+            Free Estimate
           </a>
         </div>
       </div>
 
-      <nav className="bg-ssi-bright-blue py-4 px-6">
+      <nav className="bg-ssi-bright-blue py-3 md:py-4 px-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="/" className="flex items-center shrink-0">
             <LogoSVG clipId={clipId} />
           </a>
 
-          <ul className="flex items-center gap-10">
+          {/* Hamburger */}
+          <button
+            className="md:hidden text-white p-1"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+
+          {/* Desktop nav */}
+          <ul className="hidden md:flex items-center gap-10">
             {navItems.map((nav) => (
               <li key={nav.label} className="nav-item relative">
                 <button className="font-eurostile font-bold text-[13px] uppercase tracking-wider text-white flex items-center gap-1.5 hover:text-ssi-orange transition-colors">
@@ -80,6 +101,30 @@ export default function Header({ clipId }: { clipId: string }) {
             ))}
           </ul>
         </div>
+
+        {/* Mobile nav */}
+        {mobileOpen && (
+          <div className="md:hidden mt-4 border-t border-white/20 pt-4 space-y-4">
+            {navItems.map((nav) => (
+              <div key={nav.label}>
+                <p className="font-eurostile font-bold text-sm uppercase tracking-wider text-white mb-2">
+                  {nav.label}
+                </p>
+                <div className="pl-4 space-y-2">
+                  {nav.items.map((item) => (
+                    <a
+                      key={item}
+                      href="#"
+                      className="block text-white/80 text-sm hover:text-ssi-orange transition-colors"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </nav>
     </header>
   );
